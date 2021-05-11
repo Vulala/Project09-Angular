@@ -1,0 +1,6 @@
+<h2>Last viewed patients</h2>
+<div class="patients-list">
+	<a *ngFor="let patient of patients" routerLink="/patients/edit/{{patient.uuid}}">
+		{{patient.lastName}}
+	</a>
+</div>

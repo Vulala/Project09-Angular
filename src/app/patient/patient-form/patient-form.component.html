@@ -1,0 +1,75 @@
+<!-- <!-- {{diagnostic}}
+<h2>Patient Form</h2>
+<div class="form-group">
+	<label for="patientForm">Last name: </label>
+	<input type="text" class="form-control" id="patientLastName" required [(ngModel)]="patientForm.lastName" placeholder="last name">
+</div>
+<div class="form-group">
+	<label for="patientForm">First name: </label>
+	<input type="text" class="form-control" id="firstName" required [(ngModel)]="patientForm.firstName" placeholder="first name">
+</div>
+<div class="form-group">
+	<label for="patientForm">Date of birth: </label>
+	<input type="text" class="form-control" id="dateOfBirth" required [(ngModel)]="patientForm.dateOfBirth" placeholder="date of birth">
+</div>
+<div class="form-group">
+	<label for="patientForm">Gender: </label>
+	<input type="text" class="form-control" id="gender" required [(ngModel)]="patientForm.gender" placeholder="gender">
+</div>
+<div class="form-group">
+	<label for="patientForm">Home address: </label>
+	<input type="text" class="form-control" id="homeAddress" required [(ngModel)]="patientForm.homeAddress" placeholder="home address">
+</div>-->
+<div class="container">
+	<div [hidden]="submitted">
+		<h1>Patient Form</h1>
+		<form (ngSubmit)="onSubmit()" #formPatient="ngForm">
+			<div class="form-group">
+				<label for="lastName">Last Name</label>
+				<input type="text" class="form-control" id="lastName" required [(ngModel)]="patientForm.lastName"
+					name="lastName" #lastName="ngModel">
+				<div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+					Last Name is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="firstName">First Name</label>
+				<input type="text" class="form-control" id="firstName" required [(ngModel)]="patientForm.firstName"
+					name="firstName" #firstName="ngModel">
+				<div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+					First Name is required
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-success" [disabled]="!formPatient.form.valid">Submit</button>
+			<button type="button" class="btn btn-default" (click)="newPatient()">New Patient</button>
+			<i>without</i> reset
+
+		</form>
+	</div>
+
+	<div [hidden]="!submitted">
+		<h2>You submitted the following:</h2>
+		<div class="row">
+			<div class="col-xs-3">Last Name</div>
+			<div class="col-xs-9">{{ patientForm.lastName }}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">First Name</div>
+			<div class="col-xs-9">{{ patientForm.firstName }}</div>
+		</div>
+		<br>
+		<button class="btn btn-primary" (click)="submitted=false">Edit</button>
+	</div>
+</div>
+
+<style>
+	.no-style .ng-valid {
+		border-left: 1px solid #CCC
+	}
+
+	.no-style .ng-invalid {
+		border-left: 1px solid #CCC
+	}
+</style>

@@ -1,14 +1,23 @@
-# Project09Angular
+# Project09 - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+This application is the **front-end** of the Mediscreen's micro-services architecture.
+It is used to interact with the differents micro-services.
+It render the informations and allow the end-users to do CRUD operations with a relational database.
+
+As described, it must be used with the others parts of the mediscreen application; which you can find in their respective repository :
+* [Mediscreen](https://github.com/Vulala/Project09-Mediscreen "Mediscreen")
+* [Service-SQL](https://github.com/Vulala/Project09-Service-SQL "Service-SQL")
+
+
+*Note : this project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.*
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Listen on port: 4200**
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You can run `ng serve --open` for a dev server *(the --open flag is used to open the broswer automatically once everything is compiled).* 
+Navigate to `http://localhost:4200/` to access the server.
+*Note : the app will automatically reload if you change any of the source files.*
 
 ## Build
 

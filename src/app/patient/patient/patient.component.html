@@ -1,0 +1,21 @@
+<!-- <h2>Patients List</h2>
+
+<div>
+  <label uuid="new-patient">Patient last name: </label>
+  <input for="new-patient" #patientLastName />
+
+   (click) passes input value to add() and then clears the input 
+  <button class="add-button" (click)="add(patientLastName.value); patientLastName.value=''">
+    Add patient -> ne fonctionne pas avec plusieurs valeurs
+  </button>
+</div>
+
+<ul class="patient">
+  <li *ngFor="let patient of patients">
+    <a routerLink="/detail/{{patient.uuid}}">
+      <span class="badge">{{patient.uuid}}</span> {{patient.lastName}}
+    </a>
+    <button class="delete" title="delete patient" (click)="delete(patient)">x</button>
+  </li>
+</ul>
+<app-patient-form></app-patient-form> -->

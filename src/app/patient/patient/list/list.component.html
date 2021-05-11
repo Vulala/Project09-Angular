@@ -1,0 +1,38 @@
+<h1>Patients</h1>
+<a routerLink="add" class="add-patient">Add Patient</a>
+<table>
+	<thead>
+		<tr>
+			<th>Last Name</th>
+			<th>First Name</th>
+			<th>Date of Birth</th>
+			<th>Gender</th>
+			<th>Home Address</th>
+			<th>Phone Number</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let patient of patients">
+			<td>{{patient.lastName}}</td>
+			<td>{{patient.firstName}}</td>
+			<td>{{patient.dateOfBirth}}</td>
+			<td>{{patient.gender}}</td>
+			<td>{{patient.homeAddress}}</td>
+			<td>{{patient.phoneNumber}}</td>
+			<td>
+				<a routerLink="edit/{{patient.uuid}}" class="edit-patient">Edit</a>
+				<button (click)="deletePatient (patient.uuid)" class="delete-patient">
+					<span class=""></span>
+					<span>Delete</span>
+				</button>
+			</td>
+		</tr>
+		<tr *ngIf="!patients">
+			<td>
+				<span></span>
+			</td>
+		</tr>
+	</tbody>
+
+</table>

@@ -1,0 +1,5 @@
+<div id="search-component">
+	<label for="search-box">Search a patient :</label>
+	<input maxlength="36" placeholder="uuid" #searchBox id="search-box" (input)="search(searchBox.value) " />
+	<button (click)="editTheSpecifiedPatient(searchBox.value)">Get</button>
+</div>

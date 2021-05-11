@@ -1,0 +1,32 @@
+/* PatientSearch private styles */
+#search-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  width: auto;
+  height: 2em;
+  padding: 7px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+input {
+  margin-left: 0.5%;
+  padding: .5rem;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: #336699 auto 1px;
+}
+
+button {
+  font-size: 1.2rem;
+  margin-left: 0.5%;
+}
