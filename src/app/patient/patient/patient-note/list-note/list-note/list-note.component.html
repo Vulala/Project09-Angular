@@ -1,0 +1,30 @@
+<h1>Patients' notes</h1>
+<a routerLink="add-note" class="add-patient-note">Add Note</a>
+<table>
+	<thead>
+		<tr>
+			<th>UUID</th>
+			<th>Practitionner's notes</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let patientNote of patientsNotes">
+			<td class="row-uuid">{{patientNote.uuid}}</td>
+			<td>{{patientNote.notes}}</td>
+			<td class="button">
+				<a routerLink="edit-note/{{patientNote.uuid}}" class="edit-patient-note">Edit</a>
+				<button (click)="deletePatientNote (patientNote.uuid)" class="delete-patient-note">
+					<span class=""></span>
+					<span>Delete</span>
+				</button>
+			</td>
+		</tr>
+		<tr *ngIf="!patientsNotes">
+			<td>
+				<span></span>
+			</td>
+		</tr>
+	</tbody>
+
+</table>

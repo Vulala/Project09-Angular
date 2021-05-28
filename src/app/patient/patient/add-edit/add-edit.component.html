@@ -3,14 +3,14 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="form">
         <label>Last Name : </label>
-        <input type="text" formControlName="lastName" class="form-control"
+        <input type="text" min="2" maxlength="32" formControlName="lastName" class="form-control"
             [ngClass]="{ 'is-invalid': submitted && fields.lastName.errors }" />
         <div *ngIf="submitted && fields.lastName.errors" class="invalid-feedback">
             <div *ngIf="fields.lastName.errors.required">Last Name is required</div>
         </div>
         <div>
             <label>First Name : </label>
-            <input type="text" formControlName="firstName" class="form-control"
+            <input type="text" min="2" maxlength="32" formControlName="firstName" class="form-control"
                 [ngClass]="{ 'is-invalid': submitted && fields.firstName.errors }" />
             <div *ngIf="submitted && fields.firstName.errors" class="invalid-feedback">
                 <div *ngIf="fields.firstName.errors.required">First Name is required</div>
@@ -26,7 +26,7 @@
         </div>
         <div>
             <label>Gender : </label>
-            <input type="text" formControlName="gender" class="form-control"
+            <input type="text" min="1" maxlength="32" formControlName="gender" class="form-control"
                 [ngClass]="{ 'is-invalid': submitted && fields.gender.errors }" />
             <div *ngIf="submitted && fields.gender.errors" class="invalid-feedback">
                 <div *ngIf="fields.gender.errors.required">Gender is required</div>
@@ -41,7 +41,7 @@
         </div>
         <div>
             <label>Phone Number : </label>
-            <input type="text" formControlName="phoneNumber" class="form-control" />
+            <input type="text" min="8" maxlength="16" formControlName="phoneNumber" class="form-control" />
             <div *ngIf="submitted"></div>
         </div>
 

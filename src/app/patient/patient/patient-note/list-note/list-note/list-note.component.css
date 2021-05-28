@@ -1,0 +1,80 @@
+.add-patient-note {
+    padding: 10px;
+    text-decoration: none;
+    background-color: #42B63E;
+    color: #3d3d3d;
+    border-radius: 10px;
+    border: #3d3d3d 5px;
+  }
+  
+  .edit-patient-note {
+    padding: 7px;
+    text-decoration: none;
+    background-color: #5390D9;
+    color: #3d3d3d;
+    border-radius: 100px;
+    border: #3d3d3d 10px;
+    font-size: 1em;
+  }
+  
+  .delete-patient-note {
+    padding: 7px;
+    text-decoration: none;
+    background-color: #E63946;
+    color: #3d3d3d;
+    border-radius: 100px;
+    border: #3d3d3d 10px;
+    font-size: 1em;
+  }
+  
+  .add-patient-note:hover {
+    color: white;
+    background-color: #42B63E;
+  }
+  
+  .edit-patient-note:hover {
+    color: white;
+    background-color: #5390D9;
+  }
+  
+  .delete-patient-note:hover {
+    color: white;
+    background-color: #E63946;
+    cursor: pointer;
+  }
+  
+  .add-patient-note.active {
+    background-color: black;
+  }
+  
+  .edit-patient-note.active {
+    background-color: black;
+  }
+  
+  .delete-patient-note.active {
+    background-color: black;
+  }
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 50px 15px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2.5px 2.5px 2.5px grey;
+    margin-top: 25px;
+  }
+  
+  th {
+    padding: 6px;
+    background-color: #e8e8e8;
+    color: #3d3d3d;
+    border-radius: 10px;
+    border: #3d3d3d 5px;
+  }
+
+  .row-uuid {
+    padding: 20px;
+  }
+
+  .button {
+    width: 106px;
+  }

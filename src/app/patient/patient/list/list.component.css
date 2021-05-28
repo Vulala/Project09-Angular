@@ -8,21 +8,23 @@
 }
 
 .edit-patient {
-  padding: 6px;
+  padding: 7px;
   text-decoration: none;
   background-color: #5390D9;
   color: #3d3d3d;
   border-radius: 100px;
   border: #3d3d3d 10px;
+  font-size: 1em;
 }
 
 .delete-patient {
-  padding: 6px;
+  padding: 7px;
   text-decoration: none;
   background-color: #E63946;
   color: #3d3d3d;
   border-radius: 100px;
   border: #3d3d3d 10px;
+  font-size: 1em;
 }
 
 .add-patient:hover {
@@ -67,4 +69,12 @@ th {
   color: #3d3d3d;
   border-radius: 10px;
   border: #3d3d3d 5px;
+}
+
+.row-uuid {
+  padding: 20px;
+}
+
+.button {
+  width: 106px;
 }

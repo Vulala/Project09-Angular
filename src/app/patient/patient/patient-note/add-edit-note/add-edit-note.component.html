@@ -1,0 +1,27 @@
+<h1 *ngIf="isAddMode">Add note</h1>
+<h1 *ngIf="!isAddMode">Edit note</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form">
+        <div *ngIf="isAddMode">
+            <label>Patient's UUID : </label>
+            <input type="text" min="36" maxlength="36" formControlName="uuid" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && fields.uuid.errors }" />
+            <div *ngIf="submitted && fields.uuid.errors" class="invalid-feedback">
+                <div *ngIf="fields.uuid.errors.required">The UUID is required</div>
+            </div>
+        </div>
+        <div>
+            <label>Practitioner's notes : </label>
+            <textarea rows="5" cols="50" formControlName="notes" class="form-control" ></textarea>
+            <div *ngIf="submitted"></div>
+        </div>
+        
+        <div class="save-edit">
+            <button (click)="goBack()">Cancel</button>
+            <button [disabled]="loading">
+                <span *ngIf="loading"></span>
+                Save
+            </button>
+        </div>
+    </div>
+</form>

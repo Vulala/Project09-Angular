@@ -3,6 +3,7 @@
 <table>
 	<thead>
 		<tr>
+			<th>UUID</th>
 			<th>Last Name</th>
 			<th>First Name</th>
 			<th>Date of Birth</th>
@@ -14,13 +15,14 @@
 
 	<tbody>
 		<tr *ngFor="let patient of patients">
+			<td>{{patient.uuid}}</td>
 			<td>{{patient.lastName}}</td>
 			<td>{{patient.firstName}}</td>
 			<td>{{patient.dateOfBirth}}</td>
 			<td>{{patient.gender}}</td>
 			<td>{{patient.homeAddress}}</td>
 			<td>{{patient.phoneNumber}}</td>
-			<td>
+			<td class="button">
 				<a routerLink="edit/{{patient.uuid}}" class="edit-patient">Edit</a>
 				<button (click)="deletePatient (patient.uuid)" class="delete-patient">
 					<span class=""></span>
@@ -34,5 +36,6 @@
 			</td>
 		</tr>
 	</tbody>
-
+	
 </table>
+<app-list-note class="list-note"></app-list-note>

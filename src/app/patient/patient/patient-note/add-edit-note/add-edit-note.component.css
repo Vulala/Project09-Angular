@@ -1,0 +1,37 @@
+h1 {
+    margin-top: 3%;
+    margin-left: 4%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+  }
+  
+  .form-control {
+    margin-top: 0.75%;
+  }
+  
+  .save-edit {
+    margin-top: 1.5%;
+    margin-left: 7%;
+  }
+  
+  button {
+    font-size: medium;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+  }
+
+  .invalid-feedback {
+    color: red;
+  }
+
+  input {
+    margin-left: 0.5%;
+    padding: .3rem;
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+  }
