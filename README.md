@@ -2,13 +2,14 @@
 
 This application is the **front-end** of the Mediscreen's micro-services architecture.
 It is used to interact with the differents micro-services.
-It render the informations and allow the end-users to do CRUD operations with a relational database and non relational database.
+It render the informations and allow the end-users to do CRUD operations with a relational database and a non relational database.
 
 As described, it must be used with the others parts of the mediscreen application; which you can find in their respective repository :
 
 * [Mediscreen](https://github.com/Vulala/Project09-Mediscreen "Mediscreen")
 * [Service-SQL](https://github.com/Vulala/Project09-Service-SQL "Service-SQL")
 * [Service-NoSQL](https://github.com/Vulala/Project09-Service-NoSQL "Service-NoSQL")
+* [Service-Diabetes](https://github.com/Vulala/Project09-Service-Diabetes "Service-Diabetes")
 
 *Note : this project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.*
 
