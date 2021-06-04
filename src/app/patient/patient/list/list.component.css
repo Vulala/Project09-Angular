@@ -1,3 +1,4 @@
+/* Patient's list private CSS styles */
 .add-patient {
   padding: 10px;
   text-decoration: none;
@@ -77,4 +78,24 @@ th {
 
 .button {
   width: 106px;
+}
+
+.get-patient-report {
+  padding: 7px;
+  text-decoration: none;
+  background-color: coral;
+  color: #3d3d3d;
+  border-radius: 100px;
+  border: #3d3d3d 10px;
+  font-size: 1em;
+}
+
+.get-patient-report.active {
+  background-color: black;
+}
+
+.get-patient-report:hover {
+  color: white;
+  background-color:coral;
+  cursor: pointer;
 }

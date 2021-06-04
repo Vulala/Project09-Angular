@@ -12,6 +12,10 @@ import { Patient } from '../../model/patient';
   templateUrl: './patient-search.component.html',
   styleUrls: ['./patient-search.component.css']
 })
+/**
+ * Class used to search a specific patient with a search bar.
+ * It returns the edit-patient template.
+ */
 export class PatientSearchComponent implements OnInit {
   patients$: Observable<Patient[]>;
   private searchTerm = new Subject<string>();
@@ -31,10 +35,10 @@ export class PatientSearchComponent implements OnInit {
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 
-      // ignore new term if same as previous term
+      // ignore a new term if it's the same as the previous term entered
       distinctUntilChanged(),
 
-      // switch to new search observable each time the term changes
+      // switch to a new search observable each time the term changes
       switchMap((term: string) => this.patientService.searchPatient(term)),
 
     ).subscribe((data) => console.log(JSON.stringify(data)));

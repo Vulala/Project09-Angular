@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
+/** Show the application's pages, see @router-outlet */
 export class LayoutComponent implements OnInit {
 
   constructor() { }

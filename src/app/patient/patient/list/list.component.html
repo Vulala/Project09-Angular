@@ -10,6 +10,7 @@
 			<th>Gender</th>
 			<th>Home Address</th>
 			<th>Phone Number</th>
+			<th>Diabetes Assessment</th>
 		</tr>
 	</thead>
 
@@ -22,10 +23,14 @@
 			<td>{{patient.gender}}</td>
 			<td>{{patient.homeAddress}}</td>
 			<td>{{patient.phoneNumber}}</td>
+			<td>{{patientReport.diabetesAssessmentResult}}
+				<button (click)="getPatientReport (patient.uuid)" class="get-patient-report">
+					<span>Generate</span>
+				</button>
+			</td>
 			<td class="button">
 				<a routerLink="edit/{{patient.uuid}}" class="edit-patient">Edit</a>
 				<button (click)="deletePatient (patient.uuid)" class="delete-patient">
-					<span class=""></span>
 					<span>Delete</span>
 				</button>
 			</td>
@@ -36,6 +41,5 @@
 			</td>
 		</tr>
 	</tbody>
-	
 </table>
 <app-list-note class="list-note"></app-list-note>
